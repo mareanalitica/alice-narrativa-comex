@@ -33,9 +33,9 @@ export default function NumberTicker({
 
   useEffect(
     () =>
-      springValue.on("change", (latest) => {
+      springValue.on("change", (latest: any) => {
         if (ref.current) {
-          ref.current.textContent = Intl.NumberFormat("en-US").format(
+          ref.current.textContent = Intl.NumberFormat("pt-BR").format(
             latest.toFixed(0),
           );
         }
