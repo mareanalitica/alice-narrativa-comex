@@ -5,6 +5,7 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import Image from "next/image";
+import { Almendra } from "next/font/google";
 
 const Circle = forwardRef<
     HTMLDivElement,
@@ -43,29 +44,29 @@ export function AnimatedBeamDemo() {
             <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={div1Ref}>
-                        <Icons.whatsapp />
+                        <Icons.usa />
                     </Circle>
                     <Circle ref={div5Ref}>
-                        <Icons.googleDocs />
+                        <Icons.holanda />
                     </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={div2Ref}>
-                        <Icons.notion />
+                        <Icons.japao />
                     </Circle>
                     <Circle ref={div4Ref} className="size-16">
-                        <Icons.mdic />
+                        <Icons.brasil />
                     </Circle>
                     <Circle ref={div6Ref}>
-                        <Icons.gov />
+                        <Icons.china />
                     </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                     <Circle ref={div3Ref}>
-                        <Icons.whatsapp />
+                        <Icons.alemanha />
                     </Circle>
                     <Circle ref={div7Ref}>
-                        <Icons.ufpe />
+                        <Icons.singapura />
                     </Circle>
                 </div>
             </div>
@@ -116,8 +117,29 @@ export function AnimatedBeamDemo() {
 }
 
 const Icons = {
+    holanda: () => (
+        <Image alt="holanda logo" className="" src={"/holanda.svg"} width={100} height={100}></Image>
+    ),
+    china: () => (
+        <Image alt="china logo" className="" src={"/china.png"} width={100} height={100}></Image>
+    ),
+    japao: () => (
+        <Image alt="japao logo" className="" src={"/bandeira-do-japao.webp"} width={100} height={100}></Image>
+    ),
+    alemanha: () => (
+        <Image alt="alemanha logo" className="" src={"/bandeira-da-alemanha.webp"} width={100} height={100}></Image>
+    ),
+    singapura: () => (
+        <Image alt="singapura logo" className="" src={"/singapura.png"} width={100} height={100}></Image>
+    ),
+    brasil: () => (
+        <Image alt="brasil logo" className="" src={"/bandeira_brasil.svg.webp"} width={100} height={100}></Image>
+    ),
+    usa: () => (
+        <Image alt="usa logo" className="" src={"/usa.webp"} width={100} height={100}></Image>
+    ),
     mdic: () => (
-        <Image alt="mdic logo" className="rounded-full" src={"/mdic.png"} width={100} height={100}></Image>
+        <Image alt="mdic logo" className="" src={"/mdic.png"} width={100} height={100}></Image>
     ),
     gov: () => (
         <Image alt="gov logo" src={"/gov.svg"} width={100} height={100}></Image>

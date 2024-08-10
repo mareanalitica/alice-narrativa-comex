@@ -1,5 +1,4 @@
 "use client";
-
 import { useCallback, useEffect, useRef } from "react";
 import createGlobe, { COBEOptions } from "cobe";
 import { useSpring } from "react-spring";
@@ -21,16 +20,17 @@ const GLOBE_CONFIG: COBEOptions = {
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [14.5995, 120.9842], size: 0.03 },
-    { location: [19.076, 72.8777], size: 0.1 },
-    { location: [23.8103, 90.4125], size: 0.05 },
-    { location: [30.0444, 31.2357], size: 0.07 },
-    { location: [39.9042, 116.4074], size: 0.08 },
-    { location: [-23.5505, -46.6333], size: 0.1 },
-    { location: [19.4326, -99.1332], size: 0.1 },
-    { location: [40.7128, -74.006], size: 0.1 },
-    { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
+    { location: [-8.2240835, -36.0665083], size: 0.07 }, // Pernambuco
+    { location: [31.2304, 121.4737], size: 0.031 },  // Porto de Xangai, China
+    { location: [1.3521, 103.8198], size: 0.031 },   // Porto de Cingapura, Singapura
+    { location: [22.5431, 114.0579], size: 0.031 },  // Porto de Shenzhen, China
+    { location: [29.8683, 121.5439], size: 0.031 },  // Porto de Ningbo-Zhoushan, China
+    { location: [23.1291, 113.2644], size: 0.031 },  // Porto de Guangzhou, China
+    { location: [35.1796, 129.0756], size: 0.031 },  // Porto de Busan, Coreia do Sul
+    { location: [22.3193, 114.1694], size: 0.031 },  // Porto de Hong Kong, China
+    { location: [51.9225, 4.47917], size: 0.031 },   // Porto de Roterdã, Países Baixos
+    { location: [25.0657, 55.1713], size: 0.031 },   // Porto de Dubai (Jebel Ali), Emirados Árabes Unidos
+    { location: [53.5511, 9.9937], size: 0.031 }     // Porto de Hamburgo, Alemanha
   ],
 };
 
@@ -50,7 +50,7 @@ export default function Globe({
     r: 0,
     config: {
       mass: 1,
-      tension: 280,
+      tension: 180,
       friction: 40,
       precision: 0.001,
     },
