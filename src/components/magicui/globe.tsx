@@ -51,7 +51,7 @@ export default function Globe({
     config: {
       mass: 1,
       tension: 180,
-      friction: 40,
+      friction: 400,
       precision: 0.001,
     },
   }));
